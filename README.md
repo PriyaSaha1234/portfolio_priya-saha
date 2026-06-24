@@ -93,7 +93,7 @@ Portfolio/
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 Clone the repository:
 
@@ -132,7 +132,3 @@ npm run build
 * LinkedIn: [www.linkedin.com/in/priyasahaggsipu](http://www.linkedin.com/in/priyasahaggsipu)
 * GitHub: github.com/PriyaSaha1234
 * Email: [priyasahasawhney2223@gmail.com](mailto:priyasahasawhney2223@gmail.com)
-
----
-
-⭐ If you like this project, consider giving it a star!
