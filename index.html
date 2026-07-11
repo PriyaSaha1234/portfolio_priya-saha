@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="src/style.css">
     <link rel="stylesheet" href="src/animation.css">
     <link rel="stylesheet" href="src/main.scss">
-
+    <!--<link rel="stylesheet" href="src/style-hero.css">-->
 
 </head>
 
@@ -23,18 +23,100 @@
 
 <section class="hero">
 
-  <!-- BASE LAYER -->
-  <div class="hero-base container hero-flex">
-    <h1>
-      FROM CONCEPT <br>
-      TO DEPLOYMENT
-    </h1>
+  <div class="flex" id="main"></div>
 
-    <p>
-      Building websites, applications, and experiences from concept to production.
-    </p>
-  </div>
 </section>
+<!--
+<div class="preloader-backdrop">
+    <div class="pb-row">
+        <div class="pb-col">
+            <p>Surface Memory</p>
+        </div>
+        <div class="pb-col">
+            <p>// / / //// / / / ///</p>
+        </div>
+        <div class="pb-col">
+            <p>Phase Offset > 17%</p>
+        </div>
+        <div class="pb-col">
+            <p>Fragments Aligning</p>
+            <p>Pattern Emerging</p>
+        </div>
+        <div class="pb-col">
+            <p>Collapse Pending</p>
+            <p>Return -- Layer Zero</p>
+        </div>
+    </div>
+    <div class="pb-row"><p>Surface Memory</p></div>
+    <div class="pb-row"><p>// / // ///// /// //</p></div>
+    <div class="pb-row"><p>Pase Offset > 16%</p></div>
+    <div class="pb-row">Pattern Emerging</div>
+    <div class="pb-row"><p>Return -- Layer Zero</p></div>
+    <div class="pb-row"><p>F - 9</p></div>
+</div>
+<div class="preloader">
+    <div class="p-row">
+        <p>Initiating</p>
+    </div>
+    <div class="p-row">
+        <div class="pb-col">
+            <div class="p-sub-col">
+                <p>Phase 01</p>
+                <p>Sequences</p>
+            </div>
+            <div class="p-sub-col">
+                <p>Signal Scan</p>
+                <p>07 Layers</p>
+            </div>
+        </div>
+        <div class="pb-col">
+            <p>PX -17</p>
+        </div>
+    </div>
+    <div class="preloader-btn-container">
+        <img id = "pbc-logo" src="/logo-light.png" alt="" />
+        <p id="pbc-label">Engage</p>
+        <p id="pbc-outro-label">Access Granted</p>
+
+
+        <div class="pbc-svg-strokes">
+            <svg
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            >
+                <circle
+                    class="stroke-track"
+                    cx="160"
+                    cy="160"
+                    r="155"
+                    stroke="#2b2b2b"
+                    stroke-width="2"
+                    stroke-dasharray="974"
+                    stroke-dashoffset="974"
+                />
+
+                <circle
+                    class="stroke-progress"
+                    cx="160"
+                    cy="160"
+                    r="155"
+                    stroke="#fff"
+                    stroke-width="2"
+                    stroke-dasharray="974"
+                    stroke-dashoffset="974"
+                />
+            </svg>
+        </div>
+    </div>
+</div>
+
+<section class="hero-section">
+    <div class="preloader-revealer"></div>
+    <h1>
+      Designing & <br>
+      Deploying Web Experiences
+    </h1>
+</section>-->
 
 
 <!-- ================= ABOUT ================= -->
@@ -190,11 +272,11 @@
         <div class="project-row">
             <div class="project-image">
                 <a href="https://heliosynthresearch.ai/" target="_blank">
-                    <img src="images/project1.png" class="imageReveal">
+                    <img src="images/project1.png">
                 </a>
             </div>
             <div class="project-content">
-                <h3>HelioSynth</h3>
+                <a href="/projects/heliosynth.html" class="no-underline"><h3>HelioSynth</h3></a>
                 <p>Designed and developed the official startup website with a focus on scalability and modern user experience.</p>
             </div>
         </div>
@@ -202,12 +284,12 @@
         <div class="project-row reverse">
           <div class="project-image">
                 <a href="https://einsteinclasses.com/" target="_blank">
-                    <img src="images/project2.png" class="imageReveal">
+                    <img src="images/project2.png">
                 </a>
             </div>
 
           <div class="project-content">
-              <h3>Einstein Classes</h3>
+            <a href="/projects/einsteinclasses.html" class="no-underline"><h3>Einstein Classes</h3></a>
               <p>Contributed to a live educational platform, building features and improving the user experience with PHP and Laravel.</p>
           </div>
       </div>
@@ -215,11 +297,11 @@
         <div class="project-row">
             <div class="project-image">
                 <a href="https://priyasaha1234.github.io/AI-Project/" target="_blank">
-                    <img src="images/project3.png" class="imageReveal">
+                    <img src="images/project3.png">
                 </a>
             </div>
             <div class="project-content">
-                <h3>Word Anagram Solver</h3>
+                <a href="/projects/wordanagram.html" class="no-underline"><h3>Word Anagram Solver</h3></a>
                 <p>AI-powered word puzzle solver that finds valid anagrams using intelligent search algorithms.</p>
             </div>
         </div>
@@ -295,6 +377,7 @@
     </div>
 </section>
 
+<!-- ================= CONTACT ================= -->
 <section class="contact-section">
 
     <!-- Base Layer -->
@@ -357,7 +440,8 @@
     });
   });
 </script>
-<script src="src/main.js"></script>
 <script type="module" src="/src/main.js"></script>
+<script type="module" src="/src/hero.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,100 @@
+:root {
+    --base-100: #fff;
+    --base-200: #7a7a7a;
+    --base-300: #000;
+}
+
+*{
+    margin: 0;
+    padding:0;
+    .box-sizing border-box;
+}
+
+h1{
+    text-transform: uppercase;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: clamp(5rem, 15vw, 15rem);
+    font-weight: 800;
+    letter-spacing: -2%;
+    line-height: 0.8;
+}
+
+p{
+    text-transform: uppercase;
+    font-family: "Geist Mono", monospace;
+    font-size: 0.75 rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+h1 .word,
+p .line{
+    position: relative;
+    transform: translateY(100%);
+    will-change: transform;
+}
+
+.preloader-backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100svh;
+    background-color: var(--base-100);
+    color: var(--base-200);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 0;
+}
+
+.pb-row{
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pb-row:nth-child(2){
+    align-items: flex-end;
+}
+
+.pb-row #pb-logo{
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.25rem;
+    border: 1px dashed var(--base-200);
+}
+
+.preloader {
+    position: fixed;
+    width: 100%;
+    height: 100svh;
+    background-color: var(--base-100);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    will-change: transform. clip-path;
+    z-index: 2;
+}
+
+.p-row{
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.p-row .p-col {
+    display: flex;
+    gap: 6rem;
+    align-items: flex-end;
+}
+
+.preloader-btn-contaner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20rem;
+    height: 20rem;
+}

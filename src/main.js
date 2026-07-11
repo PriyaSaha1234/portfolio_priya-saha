@@ -51,3 +51,97 @@ section.addEventListener("mousemove", (e)=>{
     });
 
 });
+const loadingAnimationTime = 2000;
+
+const showMainAnimation = (parent) => {
+
+  const boxContainer = document.createElement("div");
+  boxContainer.style.overflow = "hidden";
+
+  const box = document.createElement("div");
+  box.classList.add("box");
+
+  parent.appendChild(boxContainer);
+  boxContainer.appendChild(box);
+
+  const quote = [
+    ["FROM", "CONCEPT"],
+    ["TO", "DEPLOYMENT"]
+  ];
+
+  let delay = 0;
+
+  // Create lines
+  quote.forEach(line => {
+
+    const lineDiv = document.createElement("div");
+    lineDiv.classList.add("flex");
+
+    line.forEach(word => {
+
+      const text = document.createElement("span");
+
+      text.textContent = word;
+      text.classList.add("animate-slideup");
+
+      delay += 60;
+      text.style.animationDelay = delay + "ms";
+
+      lineDiv.appendChild(text);
+    });
+
+    box.appendChild(lineDiv);
+  });
+
+  const lastAnimationTime = 1000 + delay;
+
+  // Orange square
+  const secondLine = box.lastElementChild;
+
+    const fs = document.createElement("div");
+    fs.classList.add("fs");
+
+    fs.style.animationDelay = (lastAnimationTime - 100) + "ms";
+
+    secondLine.appendChild(fs);
+};
+
+const revealCurtain = (parent) => {
+
+  const curtain = document.createElement("div");
+  curtain.classList.add("flex", "curtain");
+
+  parent.appendChild(curtain);
+
+  const progressBar = document.createElement("div");
+  progressBar.classList.add("progressBar");
+
+  curtain.appendChild(progressBar);
+
+  progressBar.classList.add("progressGrow-animation");
+
+  return curtain;
+};
+
+const init = () => {
+
+  const container = document.getElementById("main");
+
+  const curtain = revealCurtain(container);
+setTimeout(() => {
+
+  // create text first
+  showMainAnimation(container);
+
+  // force browser paint
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      curtain.remove();
+    });
+  });
+
+}, loadingAnimationTime);
+  
+};
+
+init();
