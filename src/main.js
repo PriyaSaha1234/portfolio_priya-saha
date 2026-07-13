@@ -1,4 +1,14 @@
+console.log("main.js started");
 
+import { gsap } from "gsap";
+
+console.log("gsap loaded", gsap);
+
+const section = document.querySelector(".contact-section");
+const overlay = document.querySelector(".contact-overlay");
+
+console.log("section:", section);
+console.log("overlay:", overlay);
 window.addEventListener("load", () => {
 
     document.querySelectorAll(".stack-track").forEach((track, index) => {
@@ -31,10 +41,6 @@ window.addEventListener("load", () => {
     });
 
 });
-import gsap from "gsap";
-
-const section = document.querySelector(".contact-section");
-const overlay = document.querySelector(".contact-overlay");
 
 section.addEventListener("mousemove", (e)=>{
 
